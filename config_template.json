@@ -1,0 +1,31 @@
+{
+    "_comment": "이 파일은 템플릿입니다. 실제 사용 시 config.json으로 복사하여 사용하세요",
+    "_warning": "⚠️ config.json에는 실제 개인정보를 입력하지 마세요. 환경변수나 보안 설정 관리자를 사용하세요",
+    
+    "smtp_server": "smtp.gmail.com",
+    "port": 587,
+    "username": "${SMTP_USERNAME}",
+    "password": "${SMTP_PASSWORD}",
+    "recipients": ["${RECIPIENT_EMAIL}"],
+    "schedule": [],
+    
+    "app_settings": {
+        "theme": "dark",
+        "auto_start": false,
+        "minimize_to_tray": true,
+        "save_directory": "${USER_PICTURES}/참석자"
+    },
+    
+    "security": {
+        "encrypt_settings": true,
+        "password_protected": true,
+        "use_secure_config_manager": true
+    },
+    
+    "usage_instructions": {
+        "step1": "이 파일을 config.json으로 복사",
+        "step2": "${변수명} 부분을 실제 값으로 변경하거나",  
+        "step3": "환경 변수 설정: set SMTP_USERNAME=실제이메일",
+        "step4": "또는 secure_config_manager.py 사용 권장"
+    }
+}
